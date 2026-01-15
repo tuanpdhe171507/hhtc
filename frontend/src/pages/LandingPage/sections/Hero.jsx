@@ -128,7 +128,7 @@ const Hero = () => {
       <AbstractBg />
 
       <ContentWrapper data-aos="fade-right">
-        <Badge style={{ marginTop: "30px" }}>
+        <Badge style={{ marginTop: "120px" }}>
           <i className="bi bi-check-circle-fill"></i> Mạng xã hội
         </Badge>
 
