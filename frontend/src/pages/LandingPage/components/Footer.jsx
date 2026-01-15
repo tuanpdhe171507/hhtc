@@ -133,7 +133,7 @@ const Footer = () => {
         <BrandSection>
           <BrandLogo>
             <i className="bi bi-stars"></i>
-            NASATECH123
+            NASATECH
           </BrandLogo>
           <CompanyName>Công ty Cổ phần Công nghệ Vệ tinh Quốc gia</CompanyName>
           <CompanyDesc>

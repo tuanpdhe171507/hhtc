@@ -105,57 +105,57 @@ const EnterpriseBadge = styled.div`
 `;
 
 const Hero = () => {
-    return (
-        <HeroContainer>
-            <Snowfall
-                color="#3b82f6"
-                snowflakeCount={40}
-                style={{
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    width: '100%',
-                    height: '100%',
-                    zIndex: 5
-                }}
-                radius={[0.5, 2.0]}
-                speed={[0.2, 1.0]}
-                opacity={[0.3, 0.6]}
-            />
-            <DecorativeCircle style={{ width: '500px', height: '500px', top: '-10%', left: '-10%' }} />
-            <DecorativeCircle style={{ width: '300px', height: '300px', bottom: '10%', right: '40%' }} />
+  return (
+    <HeroContainer>
+      <Snowfall
+        color="#3b82f6"
+        snowflakeCount={40}
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          zIndex: 5
+        }}
+        radius={[0.5, 2.0]}
+        speed={[0.2, 1.0]}
+        opacity={[0.3, 0.6]}
+      />
+      <DecorativeCircle style={{ width: '500px', height: '500px', top: '-10%', left: '-10%' }} />
+      <DecorativeCircle style={{ width: '300px', height: '300px', bottom: '10%', right: '40%' }} />
 
-            <AbstractBg />
+      <AbstractBg />
 
-            <ContentWrapper data-aos="fade-right">
-                <Badge>
-                    <i className="bi bi-check-circle-fill"></i> Mạng xã hội
-                </Badge>
+      <ContentWrapper data-aos="fade-right">
+        <Badge style={{ marginTop: "30px" }}>
+          <i className="bi bi-check-circle-fill"></i> Mạng xã hội
+        </Badge>
 
-                <MainTitle>
-                    Công nghệ <br />
-                    Bảo mật <br />
-                    <span>Chất lượng</span>
-                </MainTitle>
+        <MainTitle>
+          Công nghệ <br />
+          Bảo mật <br />
+          <span>Chất lượng</span>
+        </MainTitle>
 
-                <div style={{ marginBottom: 30 }} data-aos="fade-up" data-aos-delay="200">
-                    <span style={{ fontSize: '1.2rem', fontWeight: 'bold', color: '#3b82f6', display: 'inline-flex', alignItems: 'center' }}>
-                        <i className="bi bi-people-fill" style={{ fontSize: '2rem', marginRight: 10 }}></i>
-                        Hợp tác cùng
-                    </span>
-                    <EnterpriseBadge>
-                        +8 Doanh nghiệp
-                    </EnterpriseBadge>
-                </div>
+        <div style={{ marginBottom: 30 }} data-aos="fade-up" data-aos-delay="200">
+          <span style={{ fontSize: '1.2rem', fontWeight: 'bold', color: '#3b82f6', display: 'inline-flex', alignItems: 'center' }}>
+            <i className="bi bi-people-fill" style={{ fontSize: '2rem', marginRight: 10 }}></i>
+            Hợp tác cùng
+          </span>
+          <EnterpriseBadge>
+            +8 Doanh nghiệp
+          </EnterpriseBadge>
+        </div>
 
-                <Description data-aos="fade-up" data-aos-delay="400">
-                    NASATECH là công ty phát triển nền tảng mạng xã hội, mang đến không gian kết nối sáng tạo,
-                    nơi người dùng có thể giao lưu, chia sẻ thông tin và cập nhật những xu hướng công nghệ mới nhất.
-                    Với sứ mệnh xây dựng cộng đồng số năng động.
-                </Description>
-            </ContentWrapper>
-        </HeroContainer>
-    );
+        <Description data-aos="fade-up" data-aos-delay="400">
+          NASATECH là công ty phát triển nền tảng mạng xã hội, mang đến không gian kết nối sáng tạo,
+          nơi người dùng có thể giao lưu, chia sẻ thông tin và cập nhật những xu hướng công nghệ mới nhất.
+          Với sứ mệnh xây dựng cộng đồng số năng động.
+        </Description>
+      </ContentWrapper>
+    </HeroContainer>
+  );
 };
 
 export default Hero;
