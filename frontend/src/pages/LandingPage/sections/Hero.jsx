@@ -159,8 +159,7 @@ const Hero = () => {
         </Badge>
 
         <MainTitle>
-          Công nghệ <br />
-          Bảo mật <br />
+          Công nghệ Bảo mật <br />
           <span>Chất lượng</span>
         </MainTitle>
 
