@@ -10,12 +10,24 @@ const HeroContainer = styled.main`
   padding: 0 5%;
   position: relative;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    padding: 100px 5% 50px;
+    text-align: center;
+    justify-content: center;
+  }
 `;
 
 const ContentWrapper = styled.div`
   max-width: 600px;
   z-index: 10;
   position: relative;
+  
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const Badge = styled.div`
@@ -46,8 +58,16 @@ const MainTitle = styled.h1`
     color: #2563eb; 
   }
 
+  @media (max-width: 1024px) {
+    font-size: 3rem;
+  }
+
   @media (max-width: 768px) {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.8rem;
   }
 `;
 
@@ -61,7 +81,13 @@ const Description = styled.p`
   padding: 20px;
   border-radius: 12px;
   backdrop-filter: blur(5px);
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    padding: 15px;
+  }
 `;
+
 
 const DecorativeCircle = styled.div`
   position: absolute;

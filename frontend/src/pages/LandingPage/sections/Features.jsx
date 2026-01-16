@@ -8,6 +8,10 @@ const SectionContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media (max-width: 768px) {
+        padding: 60px 5%;
+    }
 `;
 
 const SectionTitle = styled.h2`
@@ -16,6 +20,10 @@ const SectionTitle = styled.h2`
     color: #1e3a8a;
     margin-bottom: 1rem;
     text-align: center;
+
+    @media (max-width: 768px) {
+        font-size: 2rem;
+    }
 `;
 
 const SectionDesc = styled.p`
@@ -25,11 +33,16 @@ const SectionDesc = styled.p`
     text-align: center;
     margin-bottom: 4rem;
     line-height: 1.6;
+
+    @media (max-width: 768px) {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
 `;
 
 const GridContainer = styled.div`
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
     width: 100%;
     max-width: 1200px;

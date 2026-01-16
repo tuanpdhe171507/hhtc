@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import { Button } from 'antd';
+import { Button, Drawer } from 'antd';
 import { Link, useLocation } from 'react-router-dom';
+import { MenuOutlined } from '@ant-design/icons';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -18,9 +19,12 @@ const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 10%; // Adjusted padding to match spacing
+  padding: 10px 10%;
   background-color: #ffffff;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  
+  @media (max-width: 1024px) {
+    padding: 10px 5%;
+  }
 `;
 
 const Logo = styled.div`
@@ -28,7 +32,7 @@ const Logo = styled.div`
   align-items: center;
   font-size: 1.5rem;
   font-weight: 500;
-  color: #2e6db4; // Matching the blue tone
+  color: #2e6db4;
   cursor: pointer;
   letter-spacing: 1px;
 `;
@@ -48,7 +52,7 @@ const LogoIcon = styled.div`
 
 const NavMenu = styled.nav`
   display: flex;
-  gap: 3rem; // Wider gap as seen in image
+  gap: 3rem;
   
   @media (max-width: 768px) {
     display: none;
@@ -76,14 +80,14 @@ const NavItem = styled(Link)`
         height: 2px;
         background: #2563eb;
         position: absolute;
-        bottom: -18px; // Push underline down
+        bottom: -18px;
         left: 0;
     }
   }
 `;
 
 const ContactButton = styled(Button)`
-  background-color: #1890ff; // Antd blue, matches image bright blue
+  background-color: #1890ff;
   color: white;
   border: none;
   border-radius: 4px;
@@ -96,10 +100,67 @@ const ContactButton = styled(Button)`
     background-color: #40a9ff !important;
     color: white !important;
   }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+const MobileMenuButton = styled.div`
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #1e3a8a;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+`;
+
+const MobileNavMenu = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+`;
+
+const MobileNavItem = styled(Link)`
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  font-size: 18px;
+  padding-bottom: 5px;
+
+  &:hover {
+    color: #2563eb;
+  }
+
+  &.active {
+    color: #2563eb;
+    border-bottom: 2px solid #2563eb;
+    width: fit-content;
+  }
 `;
 
 const Header = ({ onContactClick }) => {
   const location = useLocation();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const navLinks = [
+    { to: '/', label: 'Trang chủ' },
+    { to: '/tinh-nang', label: 'Tính năng' },
+    { to: '/giai-phap', label: 'Giải pháp' },
+    { to: '/gioi-thieu', label: 'Giới thiệu' },
+    { to: '/tuyen-dung', label: 'Tuyển dụng' },
+  ];
+
+  const handleNavItemClick = () => {
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <Wrapper>
@@ -110,17 +171,61 @@ const Header = ({ onContactClick }) => {
           </LogoIcon>
           NASATECH
         </Logo>
+
         <NavMenu>
-          <NavItem to="/" className={location.pathname === '/' || location.pathname === '/index' ? 'active' : ''}>Trang chủ</NavItem>
-          <NavItem to="/tinh-nang" className={location.pathname === '/tinh-nang' ? 'active' : ''}>Tính năng</NavItem>
-          <NavItem to="/giai-phap" className={location.pathname === '/giai-phap' ? 'active' : ''}>Giải pháp</NavItem>
-          <NavItem to="/gioi-thieu" className={location.pathname === '/gioi-thieu' ? 'active' : ''}>Giới thiệu</NavItem>
-          <NavItem to="/tuyen-dung" className={location.pathname === '/tuyen-dung' ? 'active' : ''}>Tuyển dụng</NavItem>
+          {navLinks.map((link) => (
+            <NavItem
+              key={link.to}
+              to={link.to}
+              className={location.pathname === link.to || (link.to === '/' && location.pathname === '/index') ? 'active' : ''}
+            >
+              {link.label}
+            </NavItem>
+          ))}
         </NavMenu>
+
         <ContactButton type="primary" onClick={onContactClick}>Liên hệ</ContactButton>
+
+        <MobileMenuButton onClick={toggleMobileMenu}>
+          <MenuOutlined />
+        </MobileMenuButton>
       </HeaderContainer>
+
+      <Drawer
+        title="NASATECH"
+        placement="right"
+        onClose={toggleMobileMenu}
+        open={isMobileMenuOpen}
+        width={280}
+      >
+        <MobileNavMenu>
+          {navLinks.map((link) => (
+            <MobileNavItem
+              key={link.to}
+              to={link.to}
+              className={location.pathname === link.to || (link.to === '/' && location.pathname === '/index') ? 'active' : ''}
+              onClick={handleNavItemClick}
+            >
+              {link.label}
+            </MobileNavItem>
+          ))}
+          <Button
+            type="primary"
+            block
+            size="large"
+            onClick={() => {
+              onContactClick();
+              handleNavItemClick();
+            }}
+            style={{ marginTop: '10px' }}
+          >
+            Liên hệ
+          </Button>
+        </MobileNavMenu>
+      </Drawer>
     </Wrapper>
   );
 };
 
 export default Header;
+
