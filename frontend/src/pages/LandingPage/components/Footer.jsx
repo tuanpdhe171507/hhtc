@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Snowfall from 'react-snowfall';
+import { Link } from 'react-router-dom';
 
 const FooterContainer = styled.footer`
   background: linear-gradient(to bottom, #1e3a8a, #0f172a), url('https://images.unsplash.com/photo-1491002052546-bf38f186af56?q=80&w=2000&auto=format&fit=crop');
@@ -144,11 +145,11 @@ const Footer = () => {
         <LinkSection>
           <h4>Company</h4>
           <ul>
-            <li><a href="#">Trang chủ</a></li>
-            <li><a href="#">Tính năng</a></li>
-            <li><a href="#">Giải pháp</a></li>
-            <li><a href="#">Giới thiệu</a></li>
-            <li><a href="#">Tuyển dụng</a></li>
+            <li><Link to="/">Trang chủ</Link></li>
+            <li><Link to="/tinh-nang">Tính năng</Link></li>
+            <li><Link to="/giai-phap">Giải pháp</Link></li>
+            <li><Link to="/gioi-thieu">Giới thiệu</Link></li>
+            <li><Link to="/tuyen-dung">Tuyển dụng</Link></li>
           </ul>
         </LinkSection>
 
@@ -158,7 +159,7 @@ const Footer = () => {
             <p><i className="bi bi-telephone-fill"></i> +84 562 622 999</p>
             <p><i className="bi bi-envelope-fill"></i> vetinhquocgia.vn@gmail.com</p>
             <p><i className="bi bi-geo-alt-fill"></i> 199-201 Phạm Văn Đồng, Phường Xuân Đỉnh, TP. Hà Nội</p>
-            <p><i className="bi bi-globe"></i> www.enasatech.vn</p>
+            <p><i className="bi bi-globe"></i> <a href="https://www.enasatech.vn" target="_blank" rel="noopener noreferrer" style={{ color: 'white', textDecoration: 'none' }}>www.enasatech.vn</a></p>
           </ContactInfo>
         </LinkSection>
       </FooterContent>
@@ -175,3 +176,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
