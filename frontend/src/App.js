@@ -1,14 +1,9 @@
-
 import React, { Fragment } from "react";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { routes } from "./routes";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-
-
 export default function App() {
-
-
     return (
         <div>
             <Router>
