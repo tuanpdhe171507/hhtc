@@ -31,22 +31,6 @@ const ContentWrapper = styled.div`
 `;
 
 
-const Badge = styled.div`
-  display: inline-flex;
-  align-items: center;
-  background-color: #ffffff;
-  color: #2563eb;
-  font-weight: 600;
-  padding: 8px 16px;
-  border-radius: 20px;
-  margin-bottom: 24px; 
-  box-shadow: 0 4px 6px rgba(37, 99, 235, 0.1);
-
-  i {
-    margin-right: 8px;
-  }
-`;
-
 
 const MainTitle = styled.h1`
   font-size: 3.3rem;
