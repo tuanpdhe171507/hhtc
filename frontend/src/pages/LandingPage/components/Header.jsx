@@ -62,7 +62,7 @@ const NavMenu = styled.nav`
 const NavItem = styled(Link)`
   text-decoration: none;
   color: #000;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 16px;
   position: relative;
   padding-bottom: 5px;
@@ -93,7 +93,7 @@ const ContactButton = styled(Button)`
   border-radius: 4px;
   height: 40px;
   padding: 0 25px;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 16px;
   
   &:hover {
@@ -127,7 +127,7 @@ const MobileNavMenu = styled.div`
 const MobileNavItem = styled(Link)`
   text-decoration: none;
   color: #000;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 18px;
   padding-bottom: 5px;
 

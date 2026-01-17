@@ -33,7 +33,7 @@ const ContentWrapper = styled.div`
 
 
 const MainTitle = styled.h1`
-  font-size: 3.3rem;
+  font-size: 4rem;
   line-height: 1.2;
   font-weight: 800;
   color: #1e3a8a; 
@@ -58,8 +58,8 @@ const MainTitle = styled.h1`
 `;
 
 const Description = styled.p`
-  font-size: 1.1rem;
-  line-height: 1.6;
+  font-size: 1.4rem;
+  line-height: 1.7;
   margin-bottom: 2rem;
   padding: 20px;
   border-radius: 12px;
@@ -154,8 +154,8 @@ const Hero = () => {
         </Description>
 
         <div style={{ marginBottom: 30 }} data-aos="fade-up" data-aos-delay="200">
-          <span style={{ fontSize: '1.2rem', fontWeight: 'bold', color: '#3b82f6', display: 'inline-flex', alignItems: 'center' }}>
-            <i className="bi bi-people-fill" style={{ fontSize: '2rem', marginRight: 10 }}></i>
+          <span style={{ fontSize: '1.4rem', fontWeight: 'bold', color: '#3b82f6', display: 'inline-flex', alignItems: 'center' }}>
+            <i className="bi bi-people-fill" style={{ fontSize: '2.2rem', marginRight: 10 }}></i>
             Hợp tác cùng
           </span>
           <EnterpriseBadge>

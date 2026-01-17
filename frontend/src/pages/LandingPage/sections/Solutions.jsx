@@ -34,10 +34,18 @@ const SectionDesc = styled.p`
 
 const GridContainer = styled.div`
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     width: 100%;
     max-width: 1400px;
+
+    @media (max-width: 968px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 640px) {
+        grid-template-columns: 1fr;
+    }
 `;
 
 const ImageCard = styled.div`
