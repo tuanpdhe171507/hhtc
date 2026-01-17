@@ -13,11 +13,11 @@ const SectionContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 200px;
+    margin-bottom: 140px;
 
     @media (max-width: 768px) {
         padding: 60px 5%;
-        margin-bottom: 150px;
+        margin-bottom: 100px;
     }
 `;
 
