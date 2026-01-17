@@ -213,22 +213,15 @@ const LegalSection = () => {
     const categories = [
         {
             id: 1,
-            title: 'Giấy phép kinh doanh',
-            desc: 'Được cấp bởi Sở Kế hoạch và Đầu tư',
+            title: 'Giấy phép kinh doanh & Lữ hành',
+            desc: 'Chứng nhận pháp lý hoạt động cốt lõi',
             items: [
-                { img: '/images/kinhdoanh.jpg', tag: 'Business License' }
-            ]
-        },
-        {
-            id: 2,
-            title: 'Giấy phép lữ hành',
-            desc: 'Cấp bởi Cục Du lịch Quốc gia Việt Nam',
-            items: [
+                { img: '/images/kinhdoanh.jpg', tag: 'Business License' },
                 { img: '/images/kinh_doanh_lu_hanh.jpg', tag: 'Tourism License' }
             ]
         },
         {
-            id: 3,
+            id: 2,
             title: 'Hồ sơ pháp lý khác',
             desc: 'Chứng nhận thuế và văn bản liên quan',
             items: [
