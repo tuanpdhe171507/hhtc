@@ -152,9 +152,9 @@ const Header = ({ onContactClick }) => {
 
   const navLinks = [
     { to: '/', label: 'Trang chủ' },
-    { to: '/tinh-nang', label: 'Tính năng' },
-    { to: '/giai-phap', label: 'Giải pháp' },
     { to: '/gioi-thieu', label: 'Giới thiệu' },
+    { to: '/san-pham', label: 'Sản phẩm' },
+    { to: '/phap-ly', label: 'Pháp lý' },
     { to: '/tuyen-dung', label: 'Tuyển dụng' },
   ];
 
@@ -165,12 +165,13 @@ const Header = ({ onContactClick }) => {
   return (
     <Wrapper>
       <HeaderContainer>
-        <Logo>
+        <Logo style={{ display: "flex", alignItems: "center", gap: "6px" }}>
           <LogoIcon>
-            <i className="bi bi-star-fill" style={{ fontSize: '14px' }}></i>
+            <i className="bi bi-star-fill" style={{ fontSize: "14px" }}></i>
           </LogoIcon>
-          NASATECH
+          <p style={{ fontWeight: "bold", margin: 0 }}>TRAVELGROUP</p>
         </Logo>
+
 
         <NavMenu>
           {navLinks.map((link) => (
@@ -192,7 +193,7 @@ const Header = ({ onContactClick }) => {
       </HeaderContainer>
 
       <Drawer
-        title="NASATECH"
+        title="TRAVELGROUP"
         placement="right"
         onClose={toggleMobileMenu}
         open={isMobileMenuOpen}

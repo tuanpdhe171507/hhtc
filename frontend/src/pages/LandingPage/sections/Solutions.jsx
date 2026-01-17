@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
+import { tours } from '../../../data/tours';
 
 const SectionContainer = styled.div`
-    padding: 80px 5%;
+    padding: 100px 5%;
     background-color: #f8fafc;
     display: flex;
     flex-direction: column;
@@ -14,15 +16,11 @@ const SectionContainer = styled.div`
 `;
 
 const SectionTitle = styled.h2`
-    font-size: 2.5rem;
+    font-size: 28.8px;
     font-weight: 800;
     color: #1e3a8a;
     margin-bottom: 1rem;
     text-align: center;
-
-    @media (max-width: 768px) {
-        font-size: 2rem;
-    }
 `;
 
 const SectionDesc = styled.p`
@@ -30,13 +28,13 @@ const SectionDesc = styled.p`
     color: #64748b;
     max-width: 800px;
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem;
     line-height: 1.6;
 `;
 
 const GridContainer = styled.div`
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
     width: 100%;
     max-width: 1200px;
@@ -47,12 +45,14 @@ const ImageCard = styled.div`
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
 
     &:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
+        transform: translateY(-12px);
+        box-shadow: 0 25px 50px rgba(30, 58, 138, 0.15);
     }
 `;
 
@@ -61,49 +61,112 @@ const CardImage = styled.div`
     background-image: url(${props => props.bg});
     background-size: cover;
     background-position: center;
+    position: relative;
+    
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.2));
+    }
 `;
 
 const CardContent = styled.div`
-    padding: 25px;
-    text-align: center;
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+`;
+
+const CardCategory = styled.span`
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #3b82f6;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
 `;
 
 const CardTitle = styled.h3`
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     font-weight: 700;
     color: #0f172a;
-    margin-bottom: 10px;
-    text-transform: uppercase;
+    margin-bottom: 12px;
+    line-height: 1.4;
+    height: 3.1em; /* Fixed height for exactly 2 lines to align content below */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 `;
 
-const CardDesc = styled.p`
+const CardDesc = styled.div`
     font-size: 0.95rem;
-    color: #64748b;
-    line-height: 1.5;
+    color: #475569;
+    line-height: 1.6;
+    /* Removed margin-top: auto to keep content aligned close to the title */
+
+    strong {
+        display: block;
+        margin-bottom: 4px;
+        color: #0f172a;
+        font-weight: 600;
+    }
+
+    ul {
+        list-style: none;     
+        padding-left: 0;
+        margin: 0;
+    }
+
+    li {
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 4px;
+        font-size: 0.9rem;
+    }
+
+    li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #2563eb;
+        font-weight: bold;
+    }
 `;
 
 const Solutions = () => {
+    const navigate = useNavigate();
+
     return (
-        <SectionContainer id="giai-phap">
-            <SectionTitle>Sản phẩm & Giải pháp</SectionTitle>
+        <SectionContainer id="san-pham">
+            <SectionTitle>Sản phẩm du lịch</SectionTitle>
             <SectionDesc>
-                Nền tảng không chỉ kết nối người dùng mà còn cung cấp các tính năng hữu ích để chia sẻ xu hướng, sản phẩm và dịch vụ công nghệ, mang lại trải nghiệm tối ưu cho người dùng.
+                Khám phá những hành trình được thiết kế tỉ mỉ, mang lại trải nghiệm độc đáo và đẳng cấp trên khắp thế giới.
             </SectionDesc>
             <GridContainer>
-                <ImageCard data-aos="fade-right" data-aos-delay="100">
-                    <CardImage bg="/images/image1.png" />
-                    <CardContent>
-                        <CardTitle>Sự kiện công nghệ</CardTitle>
-                        <CardDesc>Tổ chức và quản lý các sự kiện trực tuyến quy mô lớn với công cụ livestream chuyên nghiệp.</CardDesc>
-                    </CardContent>
-                </ImageCard>
-                <ImageCard data-aos="fade-left" data-aos-delay="200">
-                    <CardImage bg="/images/image2.png" />
-                    <CardContent>
-                        <CardTitle>Cửa hàng số ERIC</CardTitle>
-                        <CardDesc>Giải pháp thương mại điện tử tích hợp, hỗ trợ doanh nghiệp tiếp cận khách hàng tiềm năng.</CardDesc>
-                    </CardContent>
-                </ImageCard>
+                {tours.map((tour, index) => (
+                    <ImageCard
+                        key={tour.id}
+                        data-aos="fade-up"
+                        data-aos-delay={100 * (index + 1)}
+                        onClick={() => navigate(`/tour-chi-tiet/${tour.id}`)}
+                    >
+                        <CardImage bg={tour.image} />
+                        <CardContent>
+                            <CardCategory>{tour.category}</CardCategory>
+                            <CardTitle>{tour.title}</CardTitle>
+                            <CardDesc>
+                                <strong>Giá trị nổi bật:</strong>
+                                <ul>
+                                    {tour.highlights.slice(0, 3).map((item, i) => (
+                                        <li key={i}>{item}</li>
+                                    ))}
+                                </ul>
+                            </CardDesc>
+                        </CardContent>
+                    </ImageCard>
+                ))}
             </GridContainer>
         </SectionContainer>
     );

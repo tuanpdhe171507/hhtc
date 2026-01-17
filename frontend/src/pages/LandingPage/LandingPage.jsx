@@ -22,8 +22,9 @@ const LandingPage = () => {
         const path = location.pathname;
         let elementId = '';
         if (path === '/tinh-nang') elementId = 'tinh-nang';
-        else if (path === '/giai-phap') elementId = 'giai-phap';
         else if (path === '/gioi-thieu') elementId = 'gioi-thieu';
+        else if (path === '/san-pham') elementId = 'san-pham';
+        else if (path === '/phap-ly') elementId = 'phap-ly';
         else if (path === '/tuyen-dung') elementId = 'tuyen-dung';
 
         if (elementId) {

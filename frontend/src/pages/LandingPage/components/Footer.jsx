@@ -9,9 +9,9 @@ const FooterContainer = styled.footer`
   background-blend-mode: overlay;
   background-position: center;
   color: white;
-  padding: 4rem 5% 2rem;
+  padding: 160px 5% 2rem;
   position: relative;
-  overflow: hidden; 
+  overflow: visible; 
 `;
 
 const FooterContent = styled.div`
@@ -22,8 +22,100 @@ const FooterContent = styled.div`
   position: relative;
   z-index: 2;
 
-  @media (max-width: 768px) {
+  @media (max-width: 968px) {
     grid-template-columns: 1fr;
+  }
+`;
+
+const CTABox = styled.div`
+  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  margin: -300px auto 40px;
+  max-width: 1000px;
+  width: 90%;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  h2 {
+    color: white;
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    max-width: 750px;
+    margin: 0 auto 2rem;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 768px) {
+    padding: 30px 20px;
+    margin-top: -240px;
+    h2 { font-size: 1.6rem; }
+  }
+`;
+
+const EmailForm = styled.div`
+  display: flex;
+  background: white;
+  padding: 8px;
+  border-radius: 16px;
+  max-width: 500px;
+  margin: 0 auto;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+  input {
+    flex: 1;
+    border: none;
+    padding: 0 20px;
+    font-size: 1rem;
+    outline: none;
+    color: #1e3a8a;
+    background: transparent;
+    &::placeholder { color: #94a3b8; }
+  }
+
+  button {
+    background: #1e3a8a;
+    color: white;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      background: #0f172a;
+      transform: scale(1.02);
+    }
+  }
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    gap: 10px;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    
+    input {
+      background: white;
+      padding: 15px 20px;
+      border-radius: 12px;
+      margin-bottom: 5px;
+    }
+    
+    button { 
+      width: 100%; 
+      padding: 15px;
+    }
   }
 `;
 
@@ -130,15 +222,26 @@ const Footer = () => {
         speed={[0.5, 2.0]} // Gentle falling speed
         wind={[-0.5, 0.5]} // Gentle sway
       />
+      <CTABox data-aos="zoom-in">
+        <h2>Trở thành đối tác của chúng tôi</h2>
+        <p>
+          Nếu bạn muốn trở thành đối tác với chúng tôi, hãy gửi email đến chúng tôi sẽ liên hệ với bạn sớm nhất có thể. Chúng tôi rất mong được hợp tác và cùng phát triển!
+        </p>
+        <EmailForm>
+          <input type="email" placeholder="example@gmail.com" />
+          <button>Gửi Email</button>
+        </EmailForm>
+      </CTABox>
+
       <FooterContent>
         <BrandSection>
           <BrandLogo>
             <i className="bi bi-stars"></i>
-            NASATECH
+            TRAVELGROUP
           </BrandLogo>
-          <CompanyName>Công ty Cổ phần Công nghệ Vệ tinh Quốc gia</CompanyName>
+          <CompanyName>Công ty Cổ phần Tập đoàn Du lịch Việt Nam - TravelGroup</CompanyName>
           <CompanyDesc>
-            Công ty phát triển nền tảng mạng xã hội, cung cấp không gian giao lưu, chia sẻ thông tin và kết nối cộng đồng để cập nhật những xu hướng công nghệ mới nhất.
+            TravelGroup là công ty lữ hành uy tín hàng đầu tại Việt Nam, chuyên cung cấp các tour du lịch đa dạng, trải nghiệm độc đáo và dịch vụ chuyên nghiệp nhất thị trường.
           </CompanyDesc>
         </BrandSection>
 
@@ -146,8 +249,8 @@ const Footer = () => {
           <h4>Company</h4>
           <ul>
             <li><Link to="/">Trang chủ</Link></li>
-            <li><Link to="/tinh-nang">Tính năng</Link></li>
-            <li><Link to="/giai-phap">Giải pháp</Link></li>
+            <li><Link to="/phap-ly">Pháp lý</Link></li>
+            <li><Link to="/san-pham">Sản phẩm</Link></li>
             <li><Link to="/gioi-thieu">Giới thiệu</Link></li>
             <li><Link to="/tuyen-dung">Tuyển dụng</Link></li>
           </ul>
@@ -156,10 +259,10 @@ const Footer = () => {
         <LinkSection>
           <h4>Liên hệ</h4>
           <ContactInfo>
-            <p><i className="bi bi-telephone-fill"></i> +84 562 622 999</p>
-            <p><i className="bi bi-envelope-fill"></i> vetinhquocgia.vn@gmail.com</p>
-            <p><i className="bi bi-geo-alt-fill"></i> 199-201 Phạm Văn Đồng, Phường Xuân Đỉnh, TP. Hà Nội</p>
-            <p><i className="bi bi-globe"></i> <a href="https://www.enasatech.vn" target="_blank" rel="noopener noreferrer" style={{ color: 'white', textDecoration: 'none' }}>www.enasatech.vn</a></p>
+            <p><i className="bi bi-telephone-fill"></i> 024 6685 1289</p>
+            <p><i className="bi bi-envelope-fill"></i> dulich999.vn@gmail.com</p>
+            <p><i className="bi bi-geo-alt-fill"></i> Số 199 Phạm Văn Đồng, Phường Xuân Đỉnh, TP. Hà Nội</p>
+            <p><i className="bi bi-globe"></i> <a href="https://www.travelgroup.pro.vn" target="_blank" rel="noopener noreferrer" style={{ color: 'white', textDecoration: 'none' }}>www.travelgroup.pro.vn</a></p>
           </ContactInfo>
         </LinkSection>
       </FooterContent>

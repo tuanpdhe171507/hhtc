@@ -4,31 +4,32 @@ import Snowfall from 'react-snowfall';
 
 const HeroContainer = styled.main`
   background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-  min-height: 90vh;
+  height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 0 5%;
   position: relative;
   overflow: hidden;
 
   @media (max-width: 768px) {
-    padding: 100px 5% 50px;
+    padding: 80px 5% 50px;
     text-align: center;
-    justify-content: center;
   }
 `;
 
+
 const ContentWrapper = styled.div`
-  max-width: 600px;
+  max-width: 800px;
   z-index: 10;
   position: relative;
-  
-  @media (max-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 `;
+
 
 const Badge = styled.div`
   display: inline-flex;
@@ -38,16 +39,17 @@ const Badge = styled.div`
   font-weight: 600;
   padding: 8px 16px;
   border-radius: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 24px; 
   box-shadow: 0 4px 6px rgba(37, 99, 235, 0.1);
-  
+
   i {
     margin-right: 8px;
   }
 `;
 
+
 const MainTitle = styled.h1`
-  font-size: 3.5rem;
+  font-size: 3.3rem;
   line-height: 1.2;
   font-weight: 800;
   color: #1e3a8a; 
@@ -73,20 +75,26 @@ const MainTitle = styled.h1`
 
 const Description = styled.p`
   font-size: 1.1rem;
-  color: #4b5563;
   line-height: 1.6;
   margin-bottom: 2rem;
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   padding: 20px;
   border-radius: 12px;
   backdrop-filter: blur(5px);
 
+  max-width: 1000px; 
+  width: 100%;
+
+  @media (max-width: 1024px) {
+    max-width: 700px;
+  }
+
   @media (max-width: 768px) {
     font-size: 1rem;
     padding: 15px;
+    max-width: 100%;
   }
 `;
+
 
 
 const DecorativeCircle = styled.div`
@@ -154,14 +162,12 @@ const Hero = () => {
       <AbstractBg />
 
       <ContentWrapper data-aos="fade-right">
-        <Badge style={{ marginTop: "120px" }}>
-          <i className="bi bi-check-circle-fill"></i> Mạng xã hội
-        </Badge>
-
         <MainTitle>
-          Công nghệ Bảo mật <br />
-          <span>Chất lượng</span>
+          Sức mạnh của sự khám phá Travel Group
         </MainTitle>
+        <Description data-aos="fade-up" data-aos-delay="400">
+          Travel group là công ty lữ hành uy tín nhất hiện nay tại Việt Nam, luôn sẵn sàng phục vụ du khách mọi lúc, mọi nơi, đảm bảo tính chuyên nghiệp và chất lượng dịch vụ tốt nhất thị trường.
+        </Description>
 
         <div style={{ marginBottom: 30 }} data-aos="fade-up" data-aos-delay="200">
           <span style={{ fontSize: '1.2rem', fontWeight: 'bold', color: '#3b82f6', display: 'inline-flex', alignItems: 'center' }}>
@@ -173,11 +179,7 @@ const Hero = () => {
           </EnterpriseBadge>
         </div>
 
-        <Description data-aos="fade-up" data-aos-delay="400">
-          NASATECH là công ty phát triển nền tảng mạng xã hội, mang đến không gian kết nối sáng tạo,
-          nơi người dùng có thể giao lưu, chia sẻ thông tin và cập nhật những xu hướng công nghệ mới nhất.
-          Với sứ mệnh xây dựng cộng đồng số năng động.
-        </Description>
+
       </ContentWrapper>
     </HeroContainer>
   );
