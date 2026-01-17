@@ -65,7 +65,7 @@ const ContactModal = ({ visible, onClose }) => {
                     <i className="bi bi-telephone-fill"></i>
                     <InfoBox>
                         <span>Hotline</span>
-                        <span>+84 562 622 999</span>
+                        <span>024 6685 1289</span>
                     </InfoBox>
                 </ContactItem>
 
@@ -73,7 +73,7 @@ const ContactModal = ({ visible, onClose }) => {
                     <i className="bi bi-envelope-fill"></i>
                     <InfoBox>
                         <span>Email</span>
-                        <span>vetinhquocgia.vn@gmail.com</span>
+                        <span>dulich999.vn@gmail.com</span>
                     </InfoBox>
                 </ContactItem>
 
@@ -81,7 +81,7 @@ const ContactModal = ({ visible, onClose }) => {
                     <i className="bi bi-geo-alt-fill"></i>
                     <InfoBox>
                         <span>Địa chỉ</span>
-                        <span>199-201 Phạm Văn Đồng, Xuân Đỉnh, Hà Nội</span>
+                        <span>Số 199 Phạm Văn Đồng, Phường Xuân Đỉnh, TP. Hà Nội</span>
                     </InfoBox>
                 </ContactItem>
 
@@ -89,7 +89,7 @@ const ContactModal = ({ visible, onClose }) => {
                     <i className="bi bi-globe"></i>
                     <InfoBox>
                         <span>Website</span>
-                        <span>www.enasatech.vn</span>
+                        <span>www.travelgroup.pro.vn</span>
                     </InfoBox>
                 </ContactItem>
             </ContactContent>
