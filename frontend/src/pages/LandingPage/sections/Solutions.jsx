@@ -37,7 +37,7 @@ const GridContainer = styled.div`
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
 `;
 
 const ImageCard = styled.div`

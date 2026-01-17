@@ -48,7 +48,7 @@ const ContentWrapper = styled.div`
     align-items: center;
     gap: 60px;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
     margin-top: 50px;
 
     @media (max-width: 968px) {
@@ -112,7 +112,7 @@ const RecruitButton = styled.button`
 const BenefitsSection = styled.div`
     margin-top: 80px;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
     text-align: center;
 `;
 
@@ -177,7 +177,7 @@ const BenefitDesc = styled.p`
 const ProcessSection = styled.div`
     margin-top: 80px;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
     text-align: center;
 `;
 

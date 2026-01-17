@@ -20,6 +20,13 @@ export const tours = [
             "Chi phí hợp lý, dễ tổ chức quanh năm",
             "Đội ngũ hướng dẫn viên tận tâm"
         ],
+        gallery: [
+            "/images/image.png",
+            "/images/image1.png",
+            "/images/image2.png",
+            "/images/image.png",
+            "/images/image1.png"
+        ],
         itinerary: [
             { day: 1, title: 'Hà Nội – Phố cổ – Ẩm thực Hà Thành', desc: 'Tham quan Hồ Hoàn Kiếm, Đền Ngọc Sơn. Dạo phố cổ 36 phố phường. Thưởng thức phở, bún chả, cà phê trứng.' },
             { day: 2, title: 'Hà Nội – Vịnh Hạ Long', desc: 'Di chuyển Hạ Long, lên du thuyền 4–5 sao. Tham quan hang động, chèo kayak. Ngắm hoàng hôn, tiệc tối trên vịnh.' },
@@ -49,6 +56,13 @@ export const tours = [
             "Tham quan nhiều quốc gia trong một hành trình",
             "Di sản văn hóa – kiến trúc – nghệ thuật đặc sắc",
             "Trải nghiệm đẳng cấp, phù hợp khách trung & cao cấp"
+        ],
+        gallery: [
+            "/images/image1.png",
+            "/images/image2.png",
+            "/images/image.png",
+            "/images/image1.png",
+            "/images/image2.png"
         ],
         itinerary: [
             { day: "1-2", title: 'Paris', desc: 'Tháp Eiffel, Khải Hoàn Môn. Du thuyền sông Seine. Mua sắm Galeries Lafayette.' },
@@ -80,6 +94,13 @@ export const tours = [
             "Phù hợp khách trẻ, gia đình, khách đi ngắn ngày",
             "Chi phí linh hoạt, nhiều lựa chọn điểm đến"
         ],
+        gallery: [
+            "/images/image2.png",
+            "/images/image.png",
+            "/images/image1.png",
+            "/images/image2.png",
+            "/images/image.png"
+        ],
         itinerary: [
             { day: "1-2", title: 'Tokyo', desc: 'Shibuya, Asakusa. Trải nghiệm tàu điện, mua sắm.' },
             { day: 3, title: 'Kyoto', desc: 'Đền Fushimi Inari. Trà đạo, kimono.' },
@@ -108,6 +129,13 @@ export const tours = [
             "Điểm đến biểu tượng toàn cầu",
             "Trải nghiệm đa dạng: đô thị – thiên nhiên – giải trí",
             "Phù hợp tour dài ngày, khách cao cấp"
+        ],
+        gallery: [
+            "/images/image.png",
+            "/images/image1.png",
+            "/images/image2.png",
+            "/images/image.png",
+            "/images/image1.png"
         ],
         itinerary: [
             { day: "1-3", title: 'New York', desc: 'Tượng Nữ Thần Tự Do, Times Square, Central Park.' },
@@ -139,6 +167,13 @@ export const tours = [
             "Safari hoang dã đích thực",
             "Kỳ quan thiên nhiên thế giới",
             "Văn hóa bản địa độc đáo – hiếm có"
+        ],
+        gallery: [
+            "/images/image1.png",
+            "/images/image2.png",
+            "/images/image.png",
+            "/images/image1.png",
+            "/images/image2.png"
         ],
         itinerary: [
             { day: 1, title: "Việt Nam – Châu Phi", desc: "Khởi hành đi Nam Phi. Nghỉ đêm trên máy bay." },
@@ -172,6 +207,13 @@ export const tours = [
             "Lịch sử – văn hóa – hiện đại",
             "Hành trình mạch lạc, dễ đi",
             "Ẩm thực & mua sắm phong phú"
+        ],
+        gallery: [
+            "/images/image2.png",
+            "/images/image.png",
+            "/images/image1.png",
+            "/images/image2.png",
+            "/images/image.png"
         ],
         itinerary: [
             { day: 1, title: "Việt Nam – Bắc Kinh", desc: "Tử Cấm Thành, Quảng trường Thiên An Môn, thưởng thức vịt quay Bắc Kinh." },

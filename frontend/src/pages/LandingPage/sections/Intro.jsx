@@ -48,7 +48,7 @@ const SplitLayout = styled.div`
     display: flex;
     align-items: center;
     gap: 40px;
-    max-width: 1200px;
+    max-width: 1400px;
     width: 100%;
     
     @media (max-width: 968px) {

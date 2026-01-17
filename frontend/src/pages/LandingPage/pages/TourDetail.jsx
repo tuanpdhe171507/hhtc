@@ -7,8 +7,14 @@ import {
     EnvironmentOutlined,
     StarFilled,
     ClockCircleOutlined,
-    CheckCircleFilled
+    CheckCircleFilled,
+    PhoneOutlined,
+    MessageOutlined,
+    SafetyCertificateOutlined,
+    DollarOutlined,
+    CustomerServiceOutlined
 } from '@ant-design/icons';
+import { Image } from 'antd';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { tours } from '../../../data/tours';
@@ -19,12 +25,12 @@ const PageContainer = styled.div`
 `;
 
 const ContentWrapper = styled.div`
-    max-width: 1100px;
+    max-width: 1300px;
     margin: 0 auto;
-    padding: 120px 5% 80px;
+    padding: 80px 5% 200px;
 
     @media (max-width: 768px) {
-        padding: 100px 5% 60px;
+        padding: 80px 5% 150px;
     }
 `;
 
@@ -38,7 +44,7 @@ const BackButton = styled.button`
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
     transition: color 0.3s;
     
     &:hover {
@@ -47,7 +53,7 @@ const BackButton = styled.button`
 `;
 
 const TourHeader = styled.div`
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
 `;
 
 const Category = styled.span`
@@ -73,22 +79,71 @@ const Title = styled.h1`
     }
 `;
 
-const HeroImage = styled.div`
-    width: 100%;
+const GalleryContainer = styled.div`
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
     height: 500px;
+    margin-bottom: 3rem;
     border-radius: 30px;
     overflow: hidden;
-    margin-bottom: 3rem;
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 
-    img {
+    @media (max-width: 968px) {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+`;
+
+const MainPhoto = styled.div`
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+    overflow: hidden;
+
+    img, .ant-image, .ant-image-img {
         width: 100%;
-        height: 100%;
+        height: 100% !important;
         object-fit: cover;
+        transition: transform 0.5s ease;
     }
 
-    @media (max-width: 768px) {
-        height: 300px;
+    &:hover img, &:hover .ant-image-img {
+        transform: scale(1.05);
+    }
+
+    @media (max-width: 968px) {
+        height: 350px;
+    }
+`;
+
+const SidePhotos = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px;
+
+    @media (max-width: 968px) {
+        display: none;
+    }
+`;
+
+const SidePhoto = styled.div`
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    cursor: pointer;
+
+    img, .ant-image, .ant-image-img {
+        width: 100%;
+        height: 100% !important;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+    &:hover img, &:hover .ant-image-img {
+        transform: scale(1.08);
     }
 `;
 
@@ -234,21 +289,79 @@ const PriceTag = styled.div`
     }
 `;
 
-const ContactButton = styled.button`
-    width: 100%;
-    background: #1e3a8a;
-    color: #fff;
-    border: none;
-    padding: 1rem;
-    border-radius: 12px;
-    font-size: 1.1rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background 0.3s;
-    margin-bottom: 1.5rem;
+const ConsultationBox = styled.div`
+    background: #f8fafc;
+    border-radius: 20px;
+    padding: 1.5rem;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 2rem;
 
-    &:hover {
-        background: #1e40af;
+    h4 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #0f172a;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+`;
+
+const ContactGrid = styled.div`
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+`;
+
+const ActionButton = styled.a`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px;
+    border-radius: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+
+    &.primary {
+        background: #1e3a8a;
+        color: white;
+        &:hover { background: #1e40af; transform: translateY(-2px); }
+    }
+
+    &.secondary {
+        background: #0068ff;
+        color: white;
+        &:hover { background: #0056d2; transform: translateY(-2px); }
+    }
+`;
+
+const TrustBadge = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #fff;
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #f1f5f9;
+
+    .icon {
+        width: 35px;
+        height: 35px;
+        background: #eff6ff;
+        color: #1e3a8a;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+    }
+
+    .text {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #475569;
     }
 `;
 
@@ -296,9 +409,27 @@ const TourDetail = () => {
                     </div>
                 </TourHeader>
 
-                <HeroImage>
-                    <img src={tour.imageDetail} alt={tour.title} />
-                </HeroImage>
+                <Image.PreviewGroup>
+                    <GalleryContainer>
+                        <MainPhoto>
+                            <Image src={tour.gallery?.[0] || tour.imageDetail} alt={tour.title} />
+                        </MainPhoto>
+                        <SidePhotos>
+                            <SidePhoto>
+                                <Image src={tour.gallery?.[1] || tour.imageDetail} alt={tour.title} />
+                            </SidePhoto>
+                            <SidePhoto>
+                                <Image src={tour.gallery?.[2] || tour.imageDetail} alt={tour.title} />
+                            </SidePhoto>
+                            <SidePhoto>
+                                <Image src={tour.gallery?.[3] || tour.imageDetail} alt={tour.title} />
+                            </SidePhoto>
+                            <SidePhoto>
+                                <Image src={tour.gallery?.[4] || tour.imageDetail} alt={tour.title} />
+                            </SidePhoto>
+                        </SidePhotos>
+                    </GalleryContainer>
+                </Image.PreviewGroup>
 
                 <MainGrid>
                     <div>
@@ -339,15 +470,42 @@ const TourDetail = () => {
                             <span className="label">Giá chỉ từ</span>
                             <span className="value">{tour.price}</span>
                         </PriceTag>
-                        <ContactButton>Đặt Tour Ngay</ContactButton>
-                        <div style={{ color: '#64748b', fontSize: '0.9rem', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+
+                        <ConsultationBox>
+                            <h4>Liên hệ tư vấn ngay</h4>
+                            <ContactGrid>
+                                <ActionButton href="tel:02466851289" className="primary">
+                                    <PhoneOutlined /> Gọi 024 6685 1289
+                                </ActionButton>
+                                <ActionButton href="https://zalo.me/02466851289" target="_blank" className="secondary">
+                                    <MessageOutlined /> Chat qua Zalo
+                                </ActionButton>
+                            </ContactGrid>
+                        </ConsultationBox>
+
+                        <div style={{ marginBottom: '1.5rem' }}>
+                            <TrustBadge>
+                                <div className="icon"><SafetyCertificateOutlined /></div>
+                                <div className="text">Cam kết chất lượng 100%</div>
+                            </TrustBadge>
+                            <TrustBadge>
+                                <div className="icon"><DollarOutlined /></div>
+                                <div className="text">Giá tốt nhất thị trường</div>
+                            </TrustBadge>
+                            <TrustBadge>
+                                <div className="icon"><CustomerServiceOutlined /></div>
+                                <div className="text">Hỗ trợ 24/7 tận tâm</div>
+                            </TrustBadge>
+                        </div>
+
+                        <div style={{ color: '#64748b', fontSize: '0.9rem', display: 'flex', flexDirection: 'column', gap: '10px', padding: '10px 5px' }}>
                             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                                 <span><CalendarOutlined /> Khởi hành:</span>
-                                <strong>Hàng ngày</strong>
+                                <strong style={{ color: '#1e293b' }}>Hàng ngày</strong>
                             </div>
                             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                                 <span><ClockCircleOutlined /> Thời gian:</span>
-                                <strong>{tour.stats.duration}</strong>
+                                <strong style={{ color: '#1e293b' }}>{tour.stats.duration}</strong>
                             </div>
                         </div>
                     </Sidebar>

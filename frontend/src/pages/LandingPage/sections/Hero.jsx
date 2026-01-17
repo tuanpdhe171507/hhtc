@@ -20,7 +20,7 @@ const HeroContainer = styled.main`
 
 
 const ContentWrapper = styled.div`
-  max-width: 800px;
+  max-width: 1000px;
   z-index: 10;
   position: relative;
 
@@ -65,7 +65,7 @@ const Description = styled.p`
   border-radius: 12px;
   backdrop-filter: blur(5px);
 
-  max-width: 1000px; 
+  max-width: 1200px; 
   width: 100%;
 
   @media (max-width: 1024px) {
@@ -147,7 +147,7 @@ const Hero = () => {
 
       <ContentWrapper data-aos="fade-right">
         <MainTitle>
-          Sức mạnh của sự khám phá Travel Group
+          Sức mạnh của sự khám phá <br />Travel Group
         </MainTitle>
         <Description data-aos="fade-up" data-aos-delay="400">
           Travel group là công ty lữ hành uy tín nhất hiện nay tại Việt Nam, luôn sẵn sàng phục vụ du khách mọi lúc, mọi nơi, đảm bảo tính chuyên nghiệp và chất lượng dịch vụ tốt nhất thị trường.
