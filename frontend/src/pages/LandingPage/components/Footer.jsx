@@ -9,7 +9,7 @@ const FooterContainer = styled.footer`
   background-blend-mode: overlay;
   background-position: center;
   color: white;
-  padding: 160px 5% 2rem;
+  padding: 65px 5% 2rem;
   position: relative;
   overflow: visible; 
 `;
@@ -30,9 +30,9 @@ const FooterContent = styled.div`
 const CTABox = styled.div`
   background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
   border-radius: 20px;
-  padding: 40px;
+  padding: 25px 40px;
   text-align: center;
-  margin: -300px auto 40px;
+  margin: -130px auto 40px;
   max-width: 1000px;
   width: 90%;
   position: relative;
@@ -42,17 +42,17 @@ const CTABox = styled.div`
 
   h2 {
     color: white;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     font-weight: 800;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
   }
 
   p {
     color: rgba(255, 255, 255, 0.9);
-    font-size: 1rem;
+    font-size: 0.95rem;
     max-width: 750px;
-    margin: 0 auto 2rem;
-    line-height: 1.5;
+    margin: 0 auto 1.5rem;
+    line-height: 1.4;
   }
 
   @media (max-width: 768px) {
