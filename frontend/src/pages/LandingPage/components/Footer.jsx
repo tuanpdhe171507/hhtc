@@ -28,7 +28,7 @@ const FooterContent = styled.div`
 `;
 
 const CTABox = styled.div`
-  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+  background: linear-gradient(135deg, #7093f1 0%, #7093f1 100%);
   border-radius: 20px;
   padding: 25px 40px;
   text-align: center;
@@ -83,7 +83,7 @@ const EmailForm = styled.div`
   }
 
   button {
-    background: #1e3a8a;
+    background: #7093f1;
     color: white;
     border: none;
     padding: 12px 35px;

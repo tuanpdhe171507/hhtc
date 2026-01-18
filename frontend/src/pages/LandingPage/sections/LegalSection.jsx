@@ -216,8 +216,8 @@ const LegalSection = () => {
             title: 'Giấy phép kinh doanh & Lữ hành',
             desc: 'Chứng nhận pháp lý hoạt động cốt lõi',
             items: [
-                { img: '/images/kinhdoanh.jpg', tag: 'Business License' },
-                { img: '/images/kinh_doanh_lu_hanh.jpg', tag: 'Tourism License' }
+                { img: '/images/kinh_doanh_lu_hanh.jpg', tag: 'Business License' },
+                { img: '/images/kinhdoanh.jpg', tag: 'Tourism License' }
             ]
         },
         {
