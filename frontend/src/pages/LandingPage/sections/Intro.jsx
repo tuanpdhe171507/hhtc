@@ -211,7 +211,7 @@ const Intro = () => {
             {/* First Row: Profile */}
             <SplitLayout>
                 <ImageBlock data-aos="fade-right">
-                    <img src="/images/image.png" alt="Travel Group Office" />
+                    <img src="/images/intro.png" alt="Travel Group Office" />
                 </ImageBlock>
                 <TextBlock data-aos="fade-left">
                     <HeaderWrapper>
@@ -295,7 +295,7 @@ const Intro = () => {
                     </InfoList>
                 </TextBlock>
                 <ImageBlock data-aos="fade-left">
-                    <img src="/images/image1.png" alt="Travel License" />
+                    <img src="/images/rule.png" alt="Travel License" />
                 </ImageBlock>
             </SplitLayout>
         </SectionContainer>

@@ -1,9 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import Snowfall from 'react-snowfall';
 
 const HeroContainer = styled.main`
-  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), 
+    url('https://www.marketveep.com/hubfs/Blog%20Images%20WEBP%20Format/Cove.webp');
+  background-size: cover;
+  background-position: center;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -36,12 +38,13 @@ const MainTitle = styled.h1`
   font-size: 4rem;
   line-height: 1.2;
   font-weight: 800;
-  color: #1e3a8a; 
+  color: #ffffff; 
   margin-bottom: 2rem;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.5);
   
   span {
     display: block;
-    color: #2563eb; 
+    color: #3b82f6; 
   }
 
   @media (max-width: 1024px) {
@@ -63,7 +66,8 @@ const Description = styled.p`
   margin-bottom: 2rem;
   padding: 20px;
   border-radius: 12px;
-  backdrop-filter: blur(5px);
+  color: white;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 
   max-width: 1200px; 
   width: 100%;
@@ -81,28 +85,6 @@ const Description = styled.p`
 
 
 
-const DecorativeCircle = styled.div`
-  position: absolute;
-  border-radius: 50%;
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(147, 197, 253, 0.1) 100%);
-  z-index: 1;
-`;
-
-const AbstractBg = styled.div`
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 70%;
-  height: 100%;
-  background-image: url('https://img.freepik.com/free-vector/gradient-network-connection-background_23-2148879890.jpg');
-  background-size: cover;
-  background-position: center left;
-  opacity: 0.15;
-  mask-image: linear-gradient(to right, transparent, black 40%);
-  -webkit-mask-image: linear-gradient(to right, transparent, black 40%);
-  z-index: 1;
-  pointer-events: none;
-`;
 
 const EnterpriseBadge = styled.div`
   display: inline-flex;
@@ -125,26 +107,6 @@ const EnterpriseBadge = styled.div`
 const Hero = () => {
   return (
     <HeroContainer>
-      <Snowfall
-        color="#3b82f6"
-        snowflakeCount={40}
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          zIndex: 5
-        }}
-        radius={[0.5, 2.0]}
-        speed={[0.2, 1.0]}
-        opacity={[0.3, 0.6]}
-      />
-      <DecorativeCircle style={{ width: '500px', height: '500px', top: '-10%', left: '-10%' }} />
-      <DecorativeCircle style={{ width: '300px', height: '300px', bottom: '10%', right: '40%' }} />
-
-      <AbstractBg />
-
       <ContentWrapper data-aos="fade-right">
         <MainTitle>
           Sức mạnh của sự khám phá <br />Travel Group
@@ -162,8 +124,6 @@ const Hero = () => {
             +8 Doanh nghiệp
           </EnterpriseBadge>
         </div>
-
-
       </ContentWrapper>
     </HeroContainer>
   );

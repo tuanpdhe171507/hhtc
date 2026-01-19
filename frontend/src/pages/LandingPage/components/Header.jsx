@@ -38,16 +38,19 @@ const Logo = styled.div`
 `;
 
 const LogoIcon = styled.div`
-    width: 35px;
-    height: 35px;
-    background-color: #4a8adb;
-    border-radius: 50%;
-    margin-right: 10px;
+    width: 45px;
+    height: 45px;
+    margin-right: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
-    font-size: 20px;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
 `;
 
 const NavMenu = styled.nav`
@@ -165,11 +168,11 @@ const Header = ({ onContactClick }) => {
   return (
     <Wrapper>
       <HeaderContainer>
-        <Logo style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+        <Logo to="/" style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
           <LogoIcon>
-            <i className="bi bi-star-fill" style={{ fontSize: "14px" }}></i>
+            <img src="/images/logoreact.png" alt="Logo" />
           </LogoIcon>
-          <p style={{ fontWeight: "bold", margin: 0 }}>TRAVELGROUP</p>
+          <p style={{ fontWeight: "bold", margin: 0, color: "#2e6db4", fontSize: "1.2rem" }}>TRAVELGROUP</p>
         </Logo>
 
 

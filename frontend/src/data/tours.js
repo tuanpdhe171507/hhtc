@@ -3,8 +3,8 @@ export const tours = [
         id: "noi-dia-viet-nam",
         title: "TOUR NỘI ĐỊA VIỆT NAM - “HÀNH TRÌNH DI SẢN – SẮC MÀU THIÊN NHIÊN”",
         category: "Nội địa Việt Nam",
-        image: "/images/image.png",
-        imageDetail: "/images/image.png",
+        image: "/images/image1.png",
+        imageDetail: "/images/image1.png",
         stats: {
             location: "Xuyên Việt",
             duration: "6 Ngày 5 Đêm",
@@ -21,11 +21,11 @@ export const tours = [
             "Đội ngũ hướng dẫn viên tận tâm"
         ],
         gallery: [
-            "/images/image.png",
+            "/images/image0.png",
             "/images/image1.png",
             "/images/image2.png",
-            "/images/image.png",
-            "/images/image1.png"
+            "/images/image3.png",
+            "/images/image4.png"
         ],
         itinerary: [
             { day: 1, title: 'Hà Nội – Phố cổ – Ẩm thực Hà Thành', desc: 'Tham quan Hồ Hoàn Kiếm, Đền Ngọc Sơn. Dạo phố cổ 36 phố phường. Thưởng thức phở, bún chả, cà phê trứng.' },
@@ -41,8 +41,8 @@ export const tours = [
         id: "chau-au",
         title: "TOUR CHÂU ÂU - “TINH HOA CHÂU ÂU – HÀNH TRÌNH VƯỢT THỜI GIAN”",
         category: "Châu Âu",
-        image: "/images/image1.png",
-        imageDetail: "/images/image1.png",
+        image: "/images/image6.png",
+        imageDetail: "/images/image6.png",
         stats: {
             location: "Đa quốc gia",
             duration: "10 Ngày 9 Đêm",
@@ -58,11 +58,11 @@ export const tours = [
             "Trải nghiệm đẳng cấp, phù hợp khách trung & cao cấp"
         ],
         gallery: [
-            "/images/image1.png",
-            "/images/image2.png",
-            "/images/image.png",
-            "/images/image1.png",
-            "/images/image2.png"
+            "/images/image5.png",
+            "/images/image6.png",
+            "/images/image7.png",
+            "/images/image8.png",
+            "/images/image9.png"
         ],
         itinerary: [
             { day: "1-2", title: 'Paris', desc: 'Tháp Eiffel, Khải Hoàn Môn. Du thuyền sông Seine. Mua sắm Galeries Lafayette.' },
@@ -78,8 +78,8 @@ export const tours = [
         id: "chau-a",
         title: "TOUR CHÂU Á - “SẮC MÀU VĂN HÓA – NHỊP SỐNG HIỆN ĐẠI”",
         category: "Châu Á",
-        image: "/images/image2.png",
-        imageDetail: "/images/image2.png",
+        image: "/images/image10.png",
+        imageDetail: "/images/image10.png",
         stats: {
             location: "Đông Nam Á / Đông Á",
             duration: "5 Ngày 4 Đêm",
@@ -95,11 +95,11 @@ export const tours = [
             "Chi phí linh hoạt, nhiều lựa chọn điểm đến"
         ],
         gallery: [
-            "/images/image2.png",
-            "/images/image.png",
-            "/images/image1.png",
-            "/images/image2.png",
-            "/images/image.png"
+            "/images/image10.png",
+            "/images/image11.png",
+            "/images/image12.png",
+            "/images/image13.png",
+            "/images/image14.png"
         ],
         itinerary: [
             { day: "1-2", title: 'Tokyo', desc: 'Shibuya, Asakusa. Trải nghiệm tàu điện, mua sắm.' },
@@ -114,8 +114,8 @@ export const tours = [
         id: "chau-my",
         title: "TOUR CHÂU MỸ - “GIẤC MƠ MỸ – KHÁM PHÁ TÂN THẾ GIỚI”",
         category: "Châu Mỹ",
-        image: "/images/image.png",
-        imageDetail: "/images/image.png",
+        image: "/images/image15.png",
+        imageDetail: "/images/image15.png",
         stats: {
             location: "Hoa Kỳ",
             duration: "12 Ngày 11 Đêm",
@@ -131,11 +131,11 @@ export const tours = [
             "Phù hợp tour dài ngày, khách cao cấp"
         ],
         gallery: [
-            "/images/image.png",
-            "/images/image1.png",
-            "/images/image2.png",
-            "/images/image.png",
-            "/images/image1.png"
+            "/images/image15.png",
+            "/images/image16.png",
+            "/images/image17.png",
+            "/images/image18.png",
+            "/images/image19.png"
         ],
         itinerary: [
             { day: "1-3", title: 'New York', desc: 'Tượng Nữ Thần Tự Do, Times Square, Central Park.' },
@@ -151,8 +151,8 @@ export const tours = [
         id: "chau-phi",
         title: "TOUR CHÂU PHI - \"HOANG DÃ CHÂU PHI – HÀNH TRÌNH SAFARI & KỲ QUAN THIÊN NHIÊN\"",
         category: "Châu Phi",
-        image: "/images/image1.png",
-        imageDetail: "/images/image1.png",
+        image: "/images/image20.png",
+        imageDetail: "/images/image20.png",
         stats: {
             location: "Nam Phi - Kenya - Zimbabwe",
             duration: "9 Ngày 8 Đêm",
@@ -169,11 +169,11 @@ export const tours = [
             "Văn hóa bản địa độc đáo – hiếm có"
         ],
         gallery: [
-            "/images/image1.png",
-            "/images/image2.png",
-            "/images/image.png",
-            "/images/image1.png",
-            "/images/image2.png"
+            "/images/image20.png",
+            "/images/image21.png",
+            "/images/image22.png",
+            "/images/image23.png",
+            "/images/image24.png"
         ],
         itinerary: [
             { day: 1, title: "Việt Nam – Châu Phi", desc: "Khởi hành đi Nam Phi. Nghỉ đêm trên máy bay." },
@@ -191,8 +191,8 @@ export const tours = [
         id: "trung-quoc",
         title: "TOUR TRUNG QUỐC - \"TRUNG HOA RỰC RỠ – HÀNH TRÌNH NGÀN NĂM VĂN HIẾN\"",
         category: "Trung Quốc",
-        image: "/images/image2.png",
-        imageDetail: "/images/image2.png",
+        image: "/images/image25.png",
+        imageDetail: "/images/image25.png",
         stats: {
             location: "Bắc Kinh - Tây An - Thượng Hải",
             duration: "7 Ngày 6 Đêm",
@@ -209,11 +209,11 @@ export const tours = [
             "Ẩm thực & mua sắm phong phú"
         ],
         gallery: [
-            "/images/image2.png",
-            "/images/image.png",
-            "/images/image1.png",
-            "/images/image2.png",
-            "/images/image.png"
+            "/images/image25.png",
+            "/images/image26.png",
+            "/images/image27.png",
+            "/images/image28.png",
+            "/images/image29.png"
         ],
         itinerary: [
             { day: 1, title: "Việt Nam – Bắc Kinh", desc: "Tử Cấm Thành, Quảng trường Thiên An Môn, thưởng thức vịt quay Bắc Kinh." },

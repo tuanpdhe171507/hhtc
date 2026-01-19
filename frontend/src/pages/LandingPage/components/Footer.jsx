@@ -121,6 +121,22 @@ const EmailForm = styled.div`
 
 const BrandSection = styled.div``;
 
+const LogoIcon = styled.div`
+    width: 45px;
+    height: 45px;
+    margin-right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+`;
+
 const BrandLogo = styled.div`
   font-size: 1.5rem;
   font-weight: bold;
@@ -236,7 +252,9 @@ const Footer = () => {
       <FooterContent>
         <BrandSection>
           <BrandLogo>
-            <i className="bi bi-stars"></i>
+            <LogoIcon>
+              <img src="/images/logoreact.png" alt="Logo" />
+            </LogoIcon>
             TRAVELGROUP
           </BrandLogo>
           <CompanyName>Công ty Cổ phần Tập đoàn Du lịch Việt Nam - TravelGroup</CompanyName>

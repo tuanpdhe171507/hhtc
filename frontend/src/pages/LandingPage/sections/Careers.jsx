@@ -265,7 +265,7 @@ const Careers = () => {
                 </LeftContent>
 
                 <RightContent data-aos="fade-left">
-                    <HeroImage src="/images/image1.png" alt="Join our team" />
+                    <HeroImage src="/images/iipf.png" alt="Join our team" />
                 </RightContent>
             </ContentWrapper>
 
