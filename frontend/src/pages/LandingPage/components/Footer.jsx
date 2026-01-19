@@ -122,8 +122,8 @@ const EmailForm = styled.div`
 const BrandSection = styled.div``;
 
 const LogoIcon = styled.div`
-    width: 45px;
-    height: 45px;
+    width: 100px;
+    height: 100px;
     margin-right: 8px;
     display: flex;
     justify-content: center;
@@ -253,7 +253,7 @@ const Footer = () => {
         <BrandSection>
           <BrandLogo>
             <LogoIcon>
-              <img src="/images/logoreact.png" alt="Logo" />
+              <img src="/images/logo-v2.png" alt="Logo" />
             </LogoIcon>
             TRAVELGROUP
           </BrandLogo>

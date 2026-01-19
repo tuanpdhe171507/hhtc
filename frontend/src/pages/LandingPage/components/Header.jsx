@@ -170,7 +170,7 @@ const Header = ({ onContactClick }) => {
       <HeaderContainer>
         <Logo to="/" style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
           <LogoIcon>
-            <img src="/images/logoreact.png" alt="Logo" />
+            <img src="/images/logo-v2.png" alt="Logo" />
           </LogoIcon>
           <p style={{ fontWeight: "bold", margin: 0, color: "#2e6db4", fontSize: "1.2rem" }}>TRAVELGROUP</p>
         </Logo>
