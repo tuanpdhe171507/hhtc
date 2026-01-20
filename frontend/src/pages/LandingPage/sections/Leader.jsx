@@ -70,35 +70,6 @@ const Bio = styled.div`
     }
 `;
 
-const BulletList = styled.ul`
-    list-style: none;
-    padding: 0;
-    margin-top: 30px;
-    text-align: left;
-
-    @media (max-width: 968px) {
-        display: inline-block;
-    }
-`;
-
-const BulletItem = styled.li`
-    padding-left: 25px;
-    position: relative;
-    margin-bottom: 12px;
-    font-size: 1.05rem;
-    color: #334155;
-
-    &:before {
-        content: '•';
-        position: absolute;
-        left: 0;
-        color: #2563eb;
-        font-weight: bold;
-        font-size: 1.5rem;
-        line-height: 1;
-    }
-`;
-
 const Leader = () => {
     return (
         <SectionContainer id="lanh-dao">
